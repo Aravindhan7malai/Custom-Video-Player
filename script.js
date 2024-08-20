@@ -90,7 +90,8 @@ volumeIcon.addEventListener('click', function () {
         video.volume = 1;
         volumeProgressIn.style.width = `${100}%`;
     } else {
-        volumeIcon.classList.replace('bi-volume-up-fill', 'bi-volume-mute-fill');
+        volumeIcon.classList.remove('bi-volume-up-fill', 'bi-volume-down-fill');
+        volumeIcon.classList.add('bi-volume-mute-fill');
         video.volume = 0;
         volumeProgressIn.style.width = `${0}%`;
     }
